@@ -1,0 +1,45 @@
+﻿{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start Django Server",
+            "type": "shell",
+            "command": "python manage.py runserver",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Migrations",
+            "type": "shell",
+            "command": "python manage.py migrate",
+            "group": "build"
+        },
+        {
+            "label": "Make Migrations",
+            "type": "shell",
+            "command": "python manage.py makemigrations",
+            "group": "build"
+        },
+        {
+            "label": "Create Superuser",
+            "type": "shell",
+            "command": "python manage.py createsuperuser",
+            "group": "build"
+        },
+        {
+            "label": "Install Requirements",
+            "type": "shell",
+            "command": "pip install -r requirements.txt",
+            "group": "build"
+        },
+        {
+            "label": "Update Requirements",
+            "type": "shell",
+            "command": "pip freeze > requirements.txt",
+            "group": "build"
+        }
+    ]
+}
